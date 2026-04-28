@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trà Sữa Anh Thư - Trà Sữa Thơm Ngon Tiện Lợi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4A90E2;
+      --secondary: #A3C6F9;
+      --text-dark: #1E293B;
+      --text-light: #475569;
+      --bg-color: #F4F7FB;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* TOP BANNER */
+    .top-banner {
+      background-color: #f87171;
+      color: var(--white);
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: 600;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1001;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background-color: var(--white);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      position: fixed;
+      width: 100%;
+      top: 40px;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    .btn-nav {
+      background-color: var(--primary);
+      color: var(--white) !important;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: background-color 0.3s;
+    }
+
+    .btn-nav:hover {
+      background-color: #357ABD;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 150px 8% 80px;
+      min-height: 100vh;
+      background: radial-gradient(circle at right, var(--secondary) 0%, transparent 60%);
+    }
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .hero-content h1 span {
+      color: var(--primary);
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn-main {
+      display: inline-block;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 15px 35px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(74, 144, 226, 0.4);
+    }
+
+    .hero-img {
+      max-width: 45%;
+      position: relative;
+    }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: 30px;
+      transform: rotate(3deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      transition: transform 0.5s;
+    }
+
+    .hero-img img:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .address-box {
+      display: inline-block;
+      background-color: #f87171;
+      color: var(--white);
+      padding: 15px 25px;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(248, 113, 113, 0.3);
+      animation: periodic-shake 10s infinite;
+      line-height: 1.5;
+    }
+
+    @keyframes periodic-shake {
+      0%, 90% { transform: translateX(0) rotate(0); }
+      92% { transform: translateX(-5px) rotate(-2deg); }
+      94% { transform: translateX(5px) rotate(2deg); }
+      96% { transform: translateX(-5px) rotate(-2deg); }
+      98% { transform: translateX(5px) rotate(2deg); }
+      100% { transform: translateX(0) rotate(0); }
+    }
+
+    /* MENU SECTION */
+    .menu {
+      padding: 80px 8%;
+      text-align: center;
+    }
+
+    .menu h2 {
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+
+    .category-title {
+      font-size: 2rem;
+      color: var(--primary);
+      margin: 30px 0 30px;
+      text-align: center;
+      border-bottom: 2px dashed var(--secondary);
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .menu > p {
+      color: var(--text-light);
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .menu-card {
+      background-color: var(--white);
+      border-radius: 30px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+      text-align: left;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .menu-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .menu-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .interactive-rating {
+      color: #cbd5e1;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .interactive-rating .star {
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .interactive-rating .star.active {
+      color: #fbbf24;
+    }
+
+    .interactive-rating .rating-text {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-left: 8px;
+    }
+
+    .menu-card .price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: all 0.3s;
+      text-align: center;
+      width: 100%;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    .size-options {
+      display: none;
+      margin-bottom: 15px;
+      text-align: left;
+      background-color: #f1f5f9;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+
+    .size-options label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+
+    .flavor-select {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      outline: none;
+    }
+
+    /* LOCATION SECTION */
+    .location {
+      padding: 80px 8%;
+      text-align: center;
+    }
+
+    .location h2 {
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 15px;
+    }
+
+    .location > p {
+      color: var(--text-light);
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+    
+    .map-container {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      line-height: 0; /* Loại bỏ khoảng trắng dưới iframe */
+    }
+    .flavor-select:focus {
+      border-color: var(--primary);
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      padding: 80px 8%;
+      background-color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-img {
+      flex: 1;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h2 {
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* GIỎ HÀNG & ANIMATION & MODAL */
+    .cart-wrapper {
+      position: relative;
+      cursor: pointer;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -12px;
+      background-color: #f87171;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+
+    .flying-img {
+      position: fixed;
+      z-index: 9999;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: all 0.8s ease-in-out;
+      pointer-events: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .cart-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cart-modal-content {
+      background-color: var(--white);
+      width: 90%;
+      max-width: 500px;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+
+    .close-cart {
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #f87171;
+      font-weight: bold;
+    }
+
+    .cart-items {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 15px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 15px;
+    }
+
+    .cart-item-info h4 { color: var(--text-dark); margin-bottom: 5px; }
+    .cart-item-info p { color: var(--text-light); font-size: 0.9rem; }
+    .cart-item-price { font-weight: 700; color: var(--primary); text-align: right; }
+    .btn-remove { background: none; border: none; color: #f87171; cursor: pointer; font-weight: bold; margin-top: 5px; }
+    
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      border-top: 2px solid #e2e8f0;
+      padding-top: 15px;
+    }
+
+    .btn-checkout {
+      display: block; width: 100%; text-align: center; background-color: var(--primary);
+      color: var(--white) !important; padding: 15px; border-radius: 10px; text-decoration: none;
+      font-weight: 700; margin-top: 20px; transition: background-color 0.3s;
+    }
+    .btn-checkout:hover { background-color: #357ABD; }
+
+    /* FEEDBACK SECTION */
+    .feedback {
+      padding: 80px 8%;
+      background-color: var(--bg-color);
+      text-align: center;
+    }
+
+    .feedback h2 {
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 15px;
+    }
+
+    .feedback > p {
+      color: var(--text-light);
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .feedback-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: 'Quicksand', sans-serif;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    /* STYLE CHO DANH SÁCH GÓP Ý */
+    .feedback-item {
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--primary);
+    }
+    .feedback-item h4 {
+      color: var(--text-dark);
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+    .feedback-item h4 span {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: normal;
+    }
+    .feedback-item p {
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* HOTLINE NỔI BẬT */
+    .hotline-wrapper {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .hotline-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #f87171;
+      color: var(--white) !important;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(248, 113, 113, 0.4);
+      animation: hotline-wave 7s infinite;
+    }
+
+    .hotline-icon {
+      font-size: 1.3rem;
+    }
+
+    @keyframes hotline-wave {
+      0%, 80% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); }
+      83% { transform: scale(1.05) rotate(5deg); box-shadow: 0 0 0 10px rgba(248, 113, 113, 0.3); }
+      86% { transform: scale(1.05) rotate(-5deg); box-shadow: 0 0 0 20px rgba(248, 113, 113, 0); }
+      89% { transform: scale(1.05) rotate(5deg); box-shadow: 0 0 0 10px rgba(248, 113, 113, 0.2); }
+      92% { transform: scale(1.05) rotate(-5deg); box-shadow: 0 0 0 20px rgba(248, 113, 113, 0); }
+      95%, 100% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--text-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 40px 8%;
+    }
+
+    footer p {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE CHO ĐIỆN THOẠI */
+    @media (max-width: 991px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+      }
+      .hero-content {
+        max-width: 100%;
+        margin-bottom: 50px;
+      }
+      .hero-img {
+        max-width: 90%;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        padding: 20px 0;
+        border-top: 1px solid #f1f5f9;
+      }
+      nav ul.active {
+        display: flex !important;
+      }
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner cảnh báo -->
+  <div class="top-banner">
+    * Lưu ý: Website đang trong quá trình phát triển và có thể còn một số lỗi.
+  </div>
+
+  <!-- Thanh điều hướng -->
+  <header>
+    <a href="#" class="logo">
+      <img src="https://drive.google.com/uc?export=view&id=1AyaJjtQlxNuyqVS8xvWakwvBeukoczV_" alt="Logo Trà Sữa Anh Thư">
+      Trà Sữa Anh Thư
+    </a>
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul id="nav-menu">
+        <li><a href="#">Trang Chủ</a></li>
+        <li><a href="#menu">Thực Đơn</a></li>
+        <li><a href="#about">Về Chúng Tôi</a></li>
+        <li><a href="#location">Vị Trí</a></li>
+        <li><a href="#feedback">Góp Ý</a></li>
+        <li><a href="#" class="btn-nav" onclick="alert('Quán hiện không phục vụ giao hàng. Vui lòng liên hệ Hotline 0363180370 để đặt trước và đến lấy nhé!'); return false;">Liên Hệ Quán</a></li>
+        <li>
+          <div class="cart-wrapper" id="cart-icon" onclick="toggleCart()">
+            🛒
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Phần Banner chính -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Thưởng Thức Trà Sữa <br><span>Ngon Đúng Điệu</span></h1>
+      <p>Trải nghiệm hương vị trà sữa nguyên bản kết hợp cùng trân châu dai giòn. Nguyên liệu 100% tự nhiên, an toàn cho sức khỏe và đem lại cảm giác tuyệt vời trong từng ngụm.</p>
+      <a href="#menu" class="btn-main">Khám Phá Menu</a>
+      
+      <div style="margin-top: 30px;">
+        <div class="address-box">
+          📍 Địa chỉ: 070 Mỹ hiệp, Long Bình, Tân Long, Cần Thơ, Việt Nam
+        </div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://afamilycdn.com/150157425591193600/2021/7/30/-16276307073431177164346.jpg" alt="Ly Trà Sữa Boba">
+    </div>
+  </section>
+
+  <!-- Phần Danh sách Sản phẩm -->
+  <section id="menu" class="menu">
+    <h2>Thực Đơn Của Chúng Tôi</h2>
+    <p>Những món nước và đồ ăn vặt được khách hàng yêu thích nhất tại Trà Sữa Anh Thư</p>
+    
+    <h3 class="category-title">Nước Uống</h3>
+    <div class="menu-grid">
+      <!-- Thẻ Sản Phẩm 1 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua1')">
+        <img src="https://wallpapercave.com/wp/wp11929652.jpg" alt="Trà Sữa Truyền Thống">
+        <h3>Trà Sữa Truyền Thống</h3>
+        <p>Hương vị trà đen nguyên bản hòa quyện cùng sữa tươi thơm béo và trân châu đen dai giòn.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua1" class="size-options">
+          <label><input type="radio" name="size_ts1" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts1" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 2 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua2')">
+        <img src="https://vuaphache.net/wp-content/uploads/2017/10/sua-tuoi-tran-chau-duong-den.jpg" alt="Sữa Tươi Trân Châu Đường Đen">
+        <h3>Sữa Tươi Đường Đen</h3>
+        <p>Sự kết hợp hoàn hảo giữa sữa tươi thanh trùng và lớp trân châu nấu đường đen đậm đà.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua2" class="size-options">
+          <label><input type="radio" name="size_ts2" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts2" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 3 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua3')">
+        <img src="https://th.bing.com/th/id/OIP.gn1NqUJWDJMlYkPGZ55v3AHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Latte Matcha Truyền Thống">
+        <h3>Latte Matcha Truyền Thống</h3>
+        <p>Bột matcha nguyên chất hòa quyện cùng sữa tươi thanh trùng tạo nên vị đắng nhẹ, béo thơm.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua3" class="size-options">
+          <label><input type="radio" name="size_ts3" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts3" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 4 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua4')">
+        <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Latte Matcha Mix Các Vị">
+        <h3> Latte matcha Mix Các Vị</h3>
+        <p>Biến tấu thú vị của Latte Matcha truyền thống cùng với các loại siro trái cây tươi mát.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua4" class="size-options">
+          <label><input type="radio" name="size_ts4" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts4" value="L"> Size L - 20.000đ</label>
+          <select class="flavor-select" onclick="event.stopPropagation()">
+            <option value="Dâu">Vị Dâu</option>
+            <option value="Kiwi">Vị Kiwi</option>
+            <option value="Ổi">Vị Ổi</option>
+            <option value="Đào">Vị Đào</option>
+          </select>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 5 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua5')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQra3LwrlUImi7nZiLmBNBUPcgYkZU7Pdv8QQ&s" alt="Trà Sữa Thái Xanh">
+        <h3>Trà Sữa Thái Xanh</h3>
+        <p>Hương vị trà Thái xanh thơm mát, màu sắc bắt mắt kết hợp cùng vị béo ngậy của sữa.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua5" class="size-options">
+          <label><input type="radio" name="size_ts5" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts5" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 6 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua6')">
+        <img src="https://file.hstatic.net/1000135323/file/tra_sua_ngon_0e87236e4d7442fb826c502798ec6f7e_1024x1024.jpg" alt="Trà Sữa Mix Các Vị">
+        <h3>Trà Sữa Mix Các Vị</h3>
+        <p>Hương vị trà sữa độc đáo kết hợp cùng siro trái cây tự chọn theo sở thích.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua6" class="size-options">
+          <label><input type="radio" name="size_ts6" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts6" value="L"> Size L - 20.000đ</label>
+          <select class="flavor-select" onclick="event.stopPropagation()">
+            <option value="Dâu">Vị Dâu</option>
+            <option value="Kiwi">Vị Kiwi</option>
+            <option value="Ổi">Vị Ổi</option>
+            <option value="Đào">Vị Đào</option>
+            <option value="Socola">Vị Socola</option>
+            <option value="Phúc bồn tử">Vị Phúc bồn tử</option>
+            <option value="Vỏ cam">Vị Vỏ cam</option>
+          </select>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 7 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua7')">
+        <img src="https://th.bing.com/th/id/OIP.bTynjQ94NU5uIUphcjmPeQHaHa?w=172&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Trà Ổi">
+        <h3>Trà Ổi</h3>
+        <p>Hương thơm nồng nàn của ổi hồng hòa quyện hoàn hảo trong ly trà tươi mát.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua7" class="size-options">
+          <label><input type="radio" name="size_ts7" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts7" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 8 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua8')">
+        <img src="https://th.bing.com/th/id/OIP.DKSLL6dDeQn6jN_q7C7HxgHaJQ?w=134&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Trà Dâu">
+        <h3>Trà Dâu</h3>
+        <p>Trà tươi kết hợp cùng dâu tây chua ngọt mọng nước, mang đến cảm giác bùng nổ sảng khoái.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua8" class="size-options">
+          <label><input type="radio" name="size_ts8" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts8" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 9 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua9')">
+        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Trà Vải">
+        <h3>Trà Vải</h3>
+        <p>Trà thơm thoang thoảng kết hợp cùng trái vải thiều mọng nước, thanh mát ngọt lịm.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua9" class="size-options">
+          <label><input type="radio" name="size_ts9" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts9" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 10 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua10')">
+        <img src="https://static.kinhtedouong.vn/w640/images/upload/03172022/peach2biced2btea2brecipe2b252842529_d4f58257.jpg" alt="Trà Đào">
+        <h3>Trà Đào</h3>
+        <p>Vị trà thanh mát kết hợp cùng những miếng đào vàng ươm, giòn ngọt.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua10" class="size-options">
+          <label><input type="radio" name="size_ts10" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts10" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 11 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua11')">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Soda Các Vị">
+        <h3>Soda Các Vị</h3>
+        <p>Thức uống giải nhiệt sảng khoái kết hợp với các vị trái cây tự chọn.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua11" class="size-options">
+          <label><input type="radio" name="size_ts11" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts11" value="L"> Size L - 20.000đ</label>
+          <select class="flavor-select" onclick="event.stopPropagation()">
+            <option value="Dâu">Vị Dâu</option>
+            <option value="Đào">Vị Đào</option>
+            <option value="Kiwi">Vị Kiwi</option>
+            <option value="Ổi">Vị Ổi</option>
+            <option value="Vỏ cam">Vị Vỏ cam</option>
+            <option value="Phúc bồn tử">Vị Phúc bồn tử</option>
+          </select>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Thẻ Sản Phẩm 12 -->
+      <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua12')">
+        <img src="https://beptruong.edu.vn/wp-content/uploads/2020/10/tra-sua-matcha.jpg" alt="Trà Sữa Matcha">
+        <h3>Trà Sữa Matcha</h3>
+        <p>Hương vị matcha Nhật Bản thanh mát kết hợp cùng trà sữa béo ngậy, ngọt ngào.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <div id="options-trasua12" class="size-options">
+          <label><input type="radio" name="size_ts12" value="M" checked> Size M - 15.000đ</label>
+          <label><input type="radio" name="size_ts12" value="L"> Size L - 20.000đ</label>
+        </div>
+
+        <span class="price">Từ 15.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+    </div>
+
+    <h3 class="category-title">Đồ Ăn Vặt</h3>
+    <div class="menu-grid">
+      <!-- Bánh Plan -->
+      <div class="menu-card">
+        <img src="data:image/jpeg;base64,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" alt="Bánh Plan">
+        <h3>Bánh Plan (Bánh Lăn)</h3>
+        <p>Bánh mềm mịn, béo ngậy vị trứng sữa, hòa quyện cùng lớp caramel ngọt đắng nhẹ nhàng.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <span class="price">5.000đ</span>
+        <a href="#" class="btn-outline" onclick="addToCart(event)">Thêm vào giỏ</a>
+      </div>
+
+      <!-- Pizza -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>Pizza nướng nóng hổi, phô mai béo ngậy thơm lừng kéo sợi hấp dẫn cùng lớp đế bánh giòn rụm.</p>
+        
+        <div class="interactive-rating" onclick="event.stopPropagation()">
+          <span class="star" data-value="1" onclick="rateProduct(event, 1)">★</span>
+          <span class="star" data-value="2" onclick="rateProduct(event, 2)">★</span>
+          <span class="star" data-value="3" onclick="rateProduct(event, 3)">★</span>
+          <span class="star" data-value="4" onclick="rateProduct(event, 4)">★</span>
+          <span class="star" data-value="5" onclick="rateProduct(event, 5)">★</span>
+          <span class="rating-text">Đánh giá của bạn</span>
+        </div>
+
+        <span class="price">22.000đ</span>
+        <a href="#" class="btn-outline" style="background-color: #e2e8f0; border-color: #e2e8f0; color: #64748b; cursor: not-allowed;" onclick="event.preventDefault(); alert('Món Pizza hiện tại chưa mở bán, bạn vui lòng quay lại sau nhé!');">Chưa mở bán</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần Về Chúng Tôi -->
+  <section id="about" class="about">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Về Trà Sữa Anh Thư">
+    </div>
+    <div class="about-content">
+      <h2>Câu Chuyện Của Trà Sữa Anh Thư</h2>
+      <p>Khởi nguồn từ niềm đam mê mãnh liệt với hương vị trà nguyên bản, <strong>Trà Sữa Anh Thư</strong> ra đời với sứ mệnh mang đến cho bạn những ly trà sữa không chỉ đậm vị, thơm ngon mà còn tuyệt đối an toàn cho sức khỏe.</p>
+      <p>Chúng tôi tự hào sử dụng 100% lá trà tươi chọn lọc, kết hợp cùng nguồn sữa thanh trùng chất lượng cao và các loại topping được làm thủ công mỗi ngày. Tại Trà Sữa Anh Thư, mỗi thức uống đều được pha chế bằng cả trái tim, với mong muốn mang lại cho bạn những phút giây thư giãn và ngọt ngào nhất.</p>
+    </div>
+  </section>
+
+  <!-- Phần Vị Trí & Bản đồ -->
+  <section id="location" class="location">
+    <h2>Tìm chúng tôi ở đâu?</h2>
+    <p>Ghé thăm Trà Sữa Anh Thư để thưởng thức những ly trà sữa tuyệt hảo nhé!</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.7215882973214!2d105.61502407604834!3d9.53289999054992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a10384762661e9%3A0x173b2dfb72611b5b!2zVHLDoCBz4buvYSBBbmggVGjGsA!5e0!3m2!1sen!2s!4v1777293791346!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Phần Góp Ý -->
+  <section id="feedback" class="feedback">
+    <h2>Góp Ý Khách Hàng</h2>
+    <p>Chúng tôi luôn lắng nghe ý kiến của bạn để hoàn thiện chất lượng dịch vụ mỗi ngày.</p>
+    <div class="feedback-form">
+      <form id="feedbackForm" onsubmit="submitFeedback(event)">
+        <div class="form-group">
+          <label for="name">Họ và tên</label>
+          <input type="text" id="name" name="name" placeholder="Nhập tên của bạn..." required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email liên hệ</label>
+          <input type="email" id="email" name="email" placeholder="Nhập email của bạn..." required>
+        </div>
+        <div class="form-group">
+          <label for="message">Nội dung góp ý</label>
+          <textarea id="message" name="message" placeholder="Chia sẻ ý kiến hoặc trải nghiệm của bạn với chúng tôi..." required></textarea>
+        </div>
+        <button type="submit" class="btn-main btn-submit">Gửi Góp Ý</button>
+      </form>
+    </div>
+
+    <!-- Vùng hiển thị các góp ý trước đó -->
+    <div class="feedback-list-container" style="max-width: 600px; margin: 40px auto 0; text-align: left;">
+      <h3 style="margin-bottom: 20px; color: var(--text-dark); font-size: 1.3rem;">Những góp ý gần đây</h3>
+      <div id="feedback-list"></div>
+    </div>
+  </section>
+
+  <!-- Giỏ Hàng Modal -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+      <div class="cart-header">
+        <h2 style="font-size: 1.5rem; margin: 0;">Giỏ Hàng Của Bạn</h2>
+        <span class="close-cart" onclick="toggleCart()">✕</span>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <span id="cart-total-price">0đ</span>
+      </div>
+      <a href="#" class="btn-checkout" onclick="alert('Quán không giao hàng tận nơi. Vui lòng gọi 0363180370 để chốt đơn và đến quán nhận nước nhé!'); return false;">Chốt Đơn & Đến Lấy</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Trà Sữa Anh Thư. All rights reserved. Thiết kế hiện đại mang lại trải nghiệm tốt nhất.</p>
+  </footer>
+
+  <!-- Nút Hotline Nổi -->
+  <div class="hotline-wrapper">
+    <a href="tel:0363180370" class="hotline-btn">
+      <span class="hotline-icon">📞</span>
+      <span class="hotline-text">0363180370</span>
+    </a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    }
+
+    function toggleOptions(id) {
+      const el = document.getElementById(id);
+      if (el.style.display === "block") {
+        el.style.display = "none";
+      } else {
+        el.style.display = "block";
+      }
+    }
+
+    // DANH SÁCH GIỎ HÀNG
+    let cartList = [];
+
+    function toggleCart() {
+      const cartModal = document.getElementById('cart-modal');
+      if (cartModal.style.display === "flex") {
+        cartModal.style.display = "none";
+      } else {
+        cartModal.style.display = "flex";
+        renderCart();
+      }
+    }
+
+    function renderCart() {
+      const cartItemsContainer = document.getElementById('cart-items');
+      const cartTotalPrice = document.getElementById('cart-total-price');
+      
+      cartItemsContainer.innerHTML = '';
+      let total = 0;
+
+      if (cartList.length === 0) {
+        cartItemsContainer.innerHTML = '<p style="text-align: center; color: var(--text-light);">Giỏ hàng đang trống</p>';
+        cartTotalPrice.innerText = '0đ';
+        return;
+      }
+
+      cartList.forEach((item, index) => {
+        total += item.price;
+        cartItemsContainer.innerHTML += `
+          <div class="cart-item">
+            <div class="cart-item-info">
+              <h4>${item.name}</h4>
+              <p>Size: ${item.size}</p>
+            </div>
+            <div class="cart-item-price">
+              ${item.priceText}
+              <br>
+              <button class="btn-remove" onclick="removeFromCart(${index})">Xóa</button>
+            </div>
+          </div>
+        `;
+      });
+      cartTotalPrice.innerText = total.toLocaleString('vi-VN') + 'đ';
+    }
+
+    function removeFromCart(index) {
+      cartList.splice(index, 1);
+      document.getElementById('cart-count').innerText = cartList.length;
+      renderCart();
+    }
+
+    function addToCart(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const button = event.target;
+      const card = button.closest('.menu-card');
+      const img = card.querySelector('img');
+      let name = card.querySelector('h3').innerText;
+
+      // Xử lý thêm vị cho các món Mix
+      const flavorSelect = card.querySelector('.flavor-select');
+      if (flavorSelect) {
+        name += ' (' + flavorSelect.value + ')';
+      }
+      
+      // Lấy size và tính giá từ Radio Button được chọn (hoặc giá mặc định nếu không có size)
+      const selectedSize = card.querySelector('input[type="radio"]:checked');
+      let size = 'Mặc định';
+      let priceText = '';
+
+      if (selectedSize) {
+        size = selectedSize.value;
+        priceText = selectedSize.parentElement.textContent.split('-')[1].trim();
+      } else {
+        priceText = card.querySelector('.price').innerText.replace('Từ ', '');
+      }
+
+      const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+      // Tạo hình ảnh bay
+      const imgRect = img.getBoundingClientRect();
+      const cartIcon = document.getElementById('cart-icon');
+      const cartRect = cartIcon.getBoundingClientRect();
+      const clone = img.cloneNode();
+      clone.classList.add('flying-img');
+      clone.style.top = imgRect.top + 'px';
+      clone.style.left = imgRect.left + 'px';
+      clone.style.width = imgRect.width + 'px';
+      clone.style.height = imgRect.height + 'px';
+      document.body.appendChild(clone);
+
+      void clone.offsetWidth;
+      clone.style.top = cartRect.top + (cartRect.height / 2) - 15 + 'px';
+      clone.style.left = cartRect.left + (cartRect.width / 2) - 15 + 'px';
+      clone.style.width = '30px'; clone.style.height = '30px';
+      clone.style.opacity = '0'; clone.style.transform = 'scale(0.2) rotate(360deg)';
+
+      setTimeout(() => {
+        clone.remove();
+        cartList.push({ name, size, price, priceText });
+        document.getElementById('cart-count').innerText = cartList.length;
+        cartIcon.style.transform = 'scale(1.2)';
+        setTimeout(() => cartIcon.style.transform = 'scale(1)', 200);
+      }, 800);
+    }
+
+    function rateProduct(event, value) {
+      event.preventDefault();
+      event.stopPropagation(); // Ngăn sự kiện click ảnh hưởng đến card sản phẩm
+      const container = event.target.closest('.interactive-rating');
+      const stars = container.querySelectorAll('.star');
+      const text = container.querySelector('.rating-text');
+
+      stars.forEach(star => {
+        if (parseInt(star.getAttribute('data-value')) <= value) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+      
+      text.innerText = `(Đã đánh giá ${value} sao)`;
+
+      // Lưu số sao vào Local Storage với key là tên món
+      const card = event.target.closest('.menu-card');
+      const productName = card.querySelector('h3').innerText;
+      localStorage.setItem('rating_' + productName, value);
+    }
+
+    // XỬ LÝ LƯU VÀ HIỂN THỊ GÓP Ý
+    function submitFeedback(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+      
+      // Lấy ngày giờ hiện tại
+      const today = new Date();
+      const date = today.toLocaleDateString('vi-VN') + ' lúc ' + today.toLocaleTimeString('vi-VN');
+
+      const feedback = { name, message, date };
+      
+      // Lấy danh sách cũ hoặc tạo mới nếu chưa có
+      let feedbacks = JSON.parse(localStorage.getItem('trasua_feedbacks')) || [];
+      feedbacks.unshift(feedback); // Đưa góp ý mới nhất lên đầu danh sách
+      localStorage.setItem('trasua_feedbacks', JSON.stringify(feedbacks));
+
+      alert('Cảm ơn bạn đã góp ý! Trà Sữa Anh Thư đã ghi nhận thông tin của bạn.');
+      document.getElementById('feedbackForm').reset(); // Xoá sạch form
+      renderFeedbacks(); // Cập nhật lại danh sách hiển thị
+    }
+
+    function renderFeedbacks() {
+      const list = document.getElementById('feedback-list');
+      const feedbacks = JSON.parse(localStorage.getItem('trasua_feedbacks')) || [];
+      
+      if (feedbacks.length === 0) {
+        list.innerHTML = '<p style="text-align: center; color: var(--text-light); font-style: italic;">Chưa có góp ý nào. Hãy là người đầu tiên!</p>';
+        return;
+      }
+
+      list.innerHTML = '';
+      feedbacks.forEach(fb => {
+        list.innerHTML += `
+          <div class="feedback-item">
+            <h4>${fb.name} <span>- ${fb.date}</span></h4>
+            <p>${fb.message}</p>
+          </div>
+        `;
+      });
+    }
+
+    // Tự động tải lại số sao đã đánh giá khi mở trang web
+    document.addEventListener('DOMContentLoaded', () => {
+      // Ẩn menu mobile khi click vào các liên kết
+      document.querySelectorAll('#nav-menu a, #cart-icon').forEach(item => {
+        item.addEventListener('click', () => {
+          if (window.innerWidth <= 991) {
+            document.getElementById('nav-menu').classList.remove('active');
+          }
+        });
+      });
+
+      renderFeedbacks(); // Tải danh sách góp ý
+
+      const cards = document.querySelectorAll('.menu-card');
+      cards.forEach(card => {
+        const productName = card.querySelector('h3').innerText;
+        const savedRating = localStorage.getItem('rating_' + productName);
+        
+        if (savedRating) {
+          const container = card.querySelector('.interactive-rating');
+          if (container) {
+            const stars = container.querySelectorAll('.star');
+            const text = container.querySelector('.rating-text');
+            
+            stars.forEach(star => {
+              if (parseInt(star.getAttribute('data-value')) <= savedRating) {
+                star.classList.add('active');
+              }
+            });
+            text.innerText = `(Đã đánh giá ${savedRating} sao)`;
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

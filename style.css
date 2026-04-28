@@ -1,0 +1,130 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Inter', sans-serif;
+ }
+
+ body {
+   background: #0f172a;
+   color: #e2e8f0;
+   overflow-x: hidden;
+ }
+
+ header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 40px;
+   background: rgba(15, 23, 42, 0.6);
+   backdrop-filter: blur(10px);
+   z-index: 1000;
+ }
+
+ header h1 {
+   font-size: 20px;
+   font-weight: 700;
+ }
+
+ nav a {
+   margin-left: 20px;
+   text-decoration: none;
+   color: #cbd5f5;
+   transition: 0.3s;
+ }
+
+ nav a:hover {
+   color: #38bdf8;
+ }
+
+ section {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   padding: 100px 20px;
+ }
+
+ .hero {
+   background: linear-gradient(135deg, #0f172a, #1e293b);
+ }
+
+ .hero h2 {
+   font-size: 48px;
+   margin-bottom: 20px;
+   animation: fadeUp 1s ease forwards;
+ }
+
+ .hero p {
+   font-size: 18px;
+   opacity: 0.7;
+   animation: fadeUp 1.5s ease forwards;
+ }
+
+ .btn {
+   margin-top: 30px;
+   padding: 12px 25px;
+   border-radius: 30px;
+   border: none;
+   background: #38bdf8;
+   color: #0f172a;
+   cursor: pointer;
+   font-weight: 600;
+   transition: 0.3s;
+ }
+
+ .btn:hover {
+   transform: translateY(-3px) scale(1.05);
+   box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+ }
+
+ .card-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+   width: 100%;
+   max-width: 1000px;
+ }
+
+ .card {
+   background: #1e293b;
+   padding: 20px;
+   border-radius: 20px;
+   transition: 0.4s;
+   transform: translateY(50px);
+   opacity: 0;
+ }
+
+ .card.show {
+   transform: translateY(0);
+   opacity: 1;
+ }
+
+ .card:hover {
+   transform: translateY(-10px) scale(1.03);
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+ }
+
+ footer {
+   text-align: center;
+   padding: 20px;
+   opacity: 0.6;
+ }
+
+ @keyframes fadeUp {
+   from {
+     transform: translateY(40px);
+     opacity: 0;
+   }
+
+   to {
+     transform: translateY(0);
+     opacity: 1;
+   }
+ }
