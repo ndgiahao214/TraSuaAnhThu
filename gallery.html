@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Không Gian Quán - Trà Sữa Anh Thư</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- Thanh điều hướng -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="https://drive.google.com/uc?export=view&id=1AyaJjtQlxNuyqVS8xvWakwvBeukoczV_" alt="Logo Trà Sữa Anh Thư">
+      Trà Sữa Anh Thư
+    </a>
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul id="nav-menu">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="index.html#menu">Thực Đơn</a></li>
+        <li><a href="about.html" class="active-nav">Về Chúng Tôi</a></li>
+        <li><a href="index.html#location">Vị Trí</a></li>
+        <li><a href="#" id="dark-mode-toggle" onclick="toggleDarkMode(event)">🌙 Dark Mode</a></li>
+        <li><a href="index.html#feedback">Góp Ý</a></li>
+        <li><a href="#" class="btn-nav" onclick="alert('Quán hiện không phục vụ giao hàng. Vui lòng liên hệ Hotline 0363180370 để đặt trước và đến lấy nhé!'); return false;">Liên Hệ Quán</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Phần Không Gian Quán -->
+  <section class="about" style="flex: 1; padding-top: 120px; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <h2 style="font-size: 2.5rem; color: var(--text-dark); margin-bottom: 20px;">Không Gian Quán</h2>
+    <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; max-width: 800px;">Nơi lý tưởng để bạn ghé qua, thưởng thức trà sữa và ghi lại những khoảnh khắc thật chill. Dưới đây là những hình ảnh đẹp nhất về không gian của Trà Sữa Anh Thư.</p>
+    
+    <div class="gallery-container" style="max-width: 900px; width: 100%; display: flex; flex-direction: column; gap: 40px;">
+      <!-- Chi Nhánh 1 -->
+      <div class="gallery-branch">
+        <h3>📍 Chi Nhánh 1</h3>
+        <p>070 Mỹ hiệp, Long Bình, Tân Long, Cần Thơ</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; width: 100%;">
+          <!-- Cập nhật tên ảnh của bạn ở đây -->
+          <img src="images1/anh1.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          <img src="images1/anh2.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          <img src="images1/anh3.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          <img src="images1/anh4.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          <img src="images1/anh5.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          <img src="images1/anh6.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          <img src="images1/anh7.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          <img src="images1/anh8.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          <img src="images1/anh9.jpg" alt="Không gian Chi nhánh 1" class="gallery-photo" onclick="openImageModal(this.src)" loading="lazy">
+          
+          <iframe 
+            style="width: 100%; height: 250px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: none;" 
+            src="https://www.youtube.com/embed/-WFlDFxJjlo" loading="lazy"
+            title="Video không gian quán Trà Sữa Anh Thư" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      
+      <!-- Đường phân chia -->
+      <div class="gallery-divider"></div>
+      
+      <!-- Chi Nhánh 2 -->
+      <div class="gallery-branch">
+        <h3>📍 Chi Nhánh 2</h3>
+        <p>Đang cập nhật địa chỉ...</p>
+        <div class="coming-soon-container" style="position: relative; margin-top: 20px;">
+          <img src="https://th.bing.com/th/id/OIP.53kUd48qJDrLyBWTmpCn-wHaHa?w=158&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Chi Nhánh 2" style="width: 100%; max-width: 300px; margin: auto; display: block;">
+          <div class="coming-soon-text">Sắp khai trương</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="about.html" class="btn-outline" style="display: inline-block; margin-top: 40px; max-width: 250px;">⬅ Quay Lại Về Chúng Tôi</a>
+  </section>
+
+  <!-- Modal phóng to ảnh -->
+  <div id="imageModal" class="image-modal">
+    <span class="close-modal" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="margin-top: auto;">
+    <p>© 2026 Trà Sữa Anh Thư. All rights reserved. Thiết kế hiện đại mang lại trải nghiệm tốt nhất.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

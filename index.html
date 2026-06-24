@@ -5,905 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trà Sữa Anh Thư - Trà Sữa Thơm Ngon Tiện Lợi</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #4A90E2;
-      --secondary: #A3C6F9;
-      --text-dark: #1E293B;
-      --text-light: #475569;
-      --bg-color: #F4F7FB;
-      --white: #FFFFFF;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-dark);
-      overflow-x: hidden;
-    }
-
-    /* TOP BANNER */
-    .top-banner {
-      background-color: #f87171;
-      color: var(--white);
-      text-align: center;
-      padding: 10px 15px;
-      font-size: 14px;
-      font-weight: 600;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1001;
-    }
-
-    /* HEADER */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      background-color: var(--white);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-      position: fixed;
-      width: 100%;
-      top: 40px;
-      z-index: 1000;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      height: 45px;
-      width: 45px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-      align-items: center;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: var(--text-dark);
-      font-weight: 600;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: var(--primary);
-    }
-
-    .btn-nav {
-      background-color: var(--primary);
-      color: var(--white) !important;
-      padding: 10px 24px;
-      border-radius: 50px;
-      font-weight: 700;
-      transition: background-color 0.3s;
-    }
-
-    .btn-nav:hover {
-      background-color: #357ABD;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 150px 8% 80px;
-      min-height: 100vh;
-      background: radial-gradient(circle at right, var(--secondary) 0%, transparent 60%);
-    }
-
-    .hero-content {
-      max-width: 50%;
-    }
-
-    .hero-content h1 {
-      font-size: 3.5rem;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: var(--text-dark);
-    }
-
-    .hero-content h1 span {
-      color: var(--primary);
-    }
-
-    .hero-content p {
-      font-size: 1.2rem;
-      color: var(--text-light);
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-
-    .btn-main {
-      display: inline-block;
-      background-color: var(--primary);
-      color: var(--white);
-      padding: 15px 35px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .btn-main:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 25px rgba(74, 144, 226, 0.4);
-    }
-
-    .hero-img {
-      max-width: 45%;
-      position: relative;
-    }
-
-    .hero-img img {
-      width: 100%;
-      border-radius: 30px;
-      transform: rotate(3deg);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      transition: transform 0.5s;
-    }
-
-    .hero-img img:hover {
-      transform: rotate(0deg) scale(1.02);
-    }
-
-    .address-box {
-      display: inline-block;
-      background-color: #f87171;
-      color: var(--white);
-      padding: 15px 25px;
-      border-radius: 15px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      box-shadow: 0 10px 20px rgba(248, 113, 113, 0.3);
-      animation: periodic-shake 10s infinite;
-      line-height: 1.5;
-    }
-
-    @keyframes periodic-shake {
-      0%, 90% { transform: translateX(0) rotate(0); }
-      92% { transform: translateX(-5px) rotate(-2deg); }
-      94% { transform: translateX(5px) rotate(2deg); }
-      96% { transform: translateX(-5px) rotate(-2deg); }
-      98% { transform: translateX(5px) rotate(2deg); }
-      100% { transform: translateX(0) rotate(0); }
-    }
-
-    /* MENU SECTION */
-    .menu {
-      padding: 80px 8%;
-      text-align: center;
-    }
-
-    .menu h2 {
-      font-size: 2.5rem;
-      color: var(--text-dark);
-      margin-bottom: 10px;
-    }
-
-    .category-title {
-      font-size: 2rem;
-      color: var(--primary);
-      margin: 30px 0 30px;
-      text-align: center;
-      border-bottom: 2px dashed var(--secondary);
-      display: inline-block;
-      padding-bottom: 10px;
-    }
-
-    .menu > p {
-      color: var(--text-light);
-      margin-bottom: 50px;
-      font-size: 1.1rem;
-    }
-
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-
-    .menu-card {
-      background-color: var(--white);
-      border-radius: 30px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-      text-align: left;
-    }
-
-    .menu-card:hover {
-      transform: translateY(-10px);
-    }
-
-    .menu-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-
-    .menu-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-
-    .menu-card p {
-      color: var(--text-light);
-      margin-bottom: 15px;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .interactive-rating {
-      color: #cbd5e1;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .interactive-rating .star {
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-
-    .interactive-rating .star.active {
-      color: #fbbf24;
-    }
-
-    .interactive-rating .rating-text {
-      color: var(--text-light);
-      font-size: 0.9rem;
-      margin-left: 8px;
-    }
-
-    .menu-card .price {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--primary);
-      display: block;
-      margin-bottom: 15px;
-    }
-
-    .btn-outline {
-      display: inline-block;
-      padding: 10px 25px;
-      border: 2px solid var(--primary);
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 50px;
-      transition: all 0.3s;
-      text-align: center;
-      width: 100%;
-    }
-
-    .btn-outline:hover {
-      background-color: var(--primary);
-      color: var(--white);
-    }
-
-    .size-options {
-      display: none;
-      margin-bottom: 15px;
-      text-align: left;
-      background-color: #f1f5f9;
-      padding: 10px 15px;
-      border-radius: 10px;
-    }
-
-    .size-options label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      cursor: pointer;
-    }
-
-    .flavor-select {
-      width: 100%;
-      padding: 8px 10px;
-      margin-top: 10px;
-      margin-bottom: 5px;
-      border: 1px solid #cbd5e1;
-      border-radius: 5px;
-      font-family: 'Quicksand', sans-serif;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      outline: none;
-    }
-
-    /* AI CHATBOT */
-    .ai-chat-wrapper {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    .ai-chat-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background-color: var(--primary);
-      color: var(--white) !important;
-      padding: 10px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 700;
-      box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
-      cursor: pointer;
-      animation: hotline-wave 7s infinite 2s; /* Delay animation */
-    }
-
-    .ai-chat-icon {
-      font-size: 1.3rem;
-    }
-
-    #ai-chat-modal .cart-modal-content {
-      width: 90%;
-      max-width: 450px;
-      height: 80vh;
-      max-height: 600px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    #ai-chat-messages {
-      flex-grow: 1;
-      overflow-y: auto;
-      padding: 10px;
-      background-color: #f9fafb;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .ai-message, .user-message {
-      padding: 10px 15px;
-      border-radius: 18px;
-      max-width: 80%;
-      line-height: 1.5;
-      word-wrap: break-word;
-    }
-
-    .user-message {
-      background-color: var(--primary);
-      color: var(--white);
-      align-self: flex-end;
-      border-bottom-right-radius: 4px;
-    }
-
-    .ai-message {
-      background-color: #e5e7eb;
-      color: var(--text-dark);
-      align-self: flex-start;
-      border-bottom-left-radius: 4px;
-    }
-
-    .ai-message.typing {
-      font-style: italic;
-      color: var(--text-light);
-    }
-
-    #ai-chat-input-container {
-      display: flex;
-      gap: 10px;
-    }
-
-    #ai-chat-input {
-      flex-grow: 1;
-      padding: 12px 15px;
-      border: 1px solid #cbd5e1;
-      border-radius: 50px;
-      font-size: 1rem;
-      outline: none;
-    }
-
-    #ai-chat-send-btn {
-      background-color: var(--primary);
-      color: var(--white);
-      border: none;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* TOAST NOTIFICATION */
-    .toast-notification {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--text-dark);
-      color: white;
-      padding: 16px 25px;
-      border-radius: 50px;
-      z-index: 3000;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.5s, bottom 0.5s, visibility 0.5s;
-    }
-    .toast-notification.show {
-      visibility: visible;
-      opacity: 1;
-      bottom: 50px;
-    }
-
-    /* LOCATION SECTION */
-    .location {
-      padding: 80px 8%;
-      text-align: center;
-    }
-
-    .location h2 {
-      font-size: 2.5rem;
-      color: var(--text-dark);
-      margin-bottom: 15px;
-    }
-
-    .location > p {
-      color: var(--text-light);
-      margin-bottom: 40px;
-      font-size: 1.1rem;
-    }
-    
-    .map-container {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      line-height: 0; /* Loại bỏ khoảng trắng dưới iframe */
-    }
-    .flavor-select:focus {
-      border-color: var(--primary);
-    }
-
-    /* ABOUT SECTION */
-    .about {
-      padding: 80px 8%;
-      background-color: var(--white);
-      display: flex;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .about-img {
-      flex: 1;
-    }
-
-    .about-img img {
-      width: 100%;
-      border-radius: 30px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-    }
-
-    .about-content {
-      flex: 1;
-    }
-
-    .about-content h2 {
-      font-size: 2.5rem;
-      color: var(--text-dark);
-      margin-bottom: 20px;
-    }
-
-    .about-content p {
-      color: var(--text-light);
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    /* GIỎ HÀNG & ANIMATION & MODAL */
-    .cart-wrapper {
-      position: relative;
-      cursor: pointer;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      transition: transform 0.2s;
-    }
-
-    .cart-count {
-      position: absolute;
-      top: -10px;
-      right: -12px;
-      background-color: #f87171;
-      color: var(--white);
-      font-size: 12px;
-      font-weight: 700;
-      width: 20px;
-      height: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-    }
-
-    .flying-img {
-      position: fixed;
-      z-index: 9999;
-      border-radius: 50%;
-      object-fit: cover;
-      transition: all 0.8s ease-in-out;
-      pointer-events: none;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-
-    .cart-modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0,0,0,0.5);
-      z-index: 2000;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .cart-modal-content {
-      background-color: var(--white);
-      width: 90%;
-      max-width: 500px;
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
-
-    .cart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e2e8f0;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-    }
-
-    .close-cart {
-      cursor: pointer;
-      font-size: 1.5rem;
-      color: #f87171;
-      font-weight: bold;
-    }
-
-    .cart-items {
-      max-height: 300px;
-      overflow-y: auto;
-      margin-bottom: 15px;
-    }
-
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-      border-bottom: 1px dashed #cbd5e1;
-      padding-bottom: 15px;
-    }
-
-    .cart-item-info h4 { color: var(--text-dark); margin-bottom: 5px; }
-    .cart-item-info p { color: var(--text-light); font-size: 0.9rem; }
-    .cart-item-price { font-weight: 700; color: var(--primary); text-align: right; }
-    .btn-remove { background: none; border: none; color: #f87171; cursor: pointer; font-weight: bold; margin-top: 5px; }
-
-    .cart-item-quantity {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 8px;
-    }
-    .cart-item-quantity button {
-      background-color: #e2e8f0;
-      border: none;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      font-weight: bold;
-      cursor: pointer;
-      color: var(--text-dark);
-      transition: background-color 0.2s;
-    }
-    .cart-item-quantity button:hover {
-      background-color: #cbd5e1;
-    }
-    
-    .cart-total {
-      display: flex;
-      justify-content: space-between;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      border-top: 2px solid #e2e8f0;
-      padding-top: 15px;
-    }
-
-    .btn-checkout {
-      display: block; width: 100%; text-align: center; background-color: var(--primary);
-      color: var(--white) !important; padding: 15px; border-radius: 10px; text-decoration: none;
-      font-weight: 700; margin-top: 20px; transition: background-color 0.3s;
-    }
-    .btn-checkout:hover { background-color: #357ABD; }
-
-    /* SEARCH BAR */
-    .search-container {
-      margin-bottom: 40px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #search-input {
-      width: 100%;
-      padding: 15px 20px;
-      font-size: 1rem;
-      border-radius: 50px;
-      border: 1px solid #e2e8f0;
-      outline: none;
-      transition: all 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    #search-input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 5px 20px rgba(74, 144, 226, 0.2);
-    }
-
-    /* VIP MODAL THEME */
-    .vip-theme {
-      background: linear-gradient(135deg, #fffbeb, #fef3c7);
-      border: 2px solid #fde68a;
-      box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15);
-    }
-
-    .vip-icon {
-      font-size: 3.5rem;
-      animation: float 3s ease-in-out infinite;
-      text-shadow: 0 10px 15px rgba(217, 119, 6, 0.3);
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    .vip-input-group label {
-      color: #b45309;
-      font-weight: 700;
-    }
-
-    .vip-input-group input:focus,
-    .vip-input-group textarea:focus {
-      border-color: #f59e0b;
-      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
-    }
-
-    .btn-vip-submit {
-      width: 100%; padding: 15px; font-size: 1.1rem; font-weight: 700;
-      color: var(--white); background: linear-gradient(to right, #f59e0b, #d97706);
-      border: none; border-radius: 12px; cursor: pointer;
-      box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3); transition: all 0.3s; margin-top: 10px;
-    }
-    .btn-vip-submit:hover {
-      transform: translateY(-3px); box-shadow: 0 15px 25px rgba(217, 119, 6, 0.4);
-      background: linear-gradient(to right, #fbbf24, #f59e0b);
-    }
-
-    /* FEEDBACK SECTION */
-    .feedback {
-      padding: 80px 8%;
-      background-color: var(--bg-color);
-      text-align: center;
-    }
-
-    .feedback h2 {
-      font-size: 2.5rem;
-      color: var(--text-dark);
-      margin-bottom: 15px;
-    }
-
-    .feedback > p {
-      color: var(--text-light);
-      margin-bottom: 40px;
-      font-size: 1.1rem;
-    }
-
-    .feedback-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: var(--white);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      text-align: left;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #cbd5e1;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-family: 'Quicksand', sans-serif;
-      transition: border-color 0.3s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .btn-submit {
-      width: 100%;
-      border: none;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    /* STYLE CHO DANH SÁCH GÓP Ý */
-    .feedback-item {
-      background-color: var(--white);
-      padding: 20px;
-      border-radius: 15px;
-      margin-bottom: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      border-left: 4px solid var(--primary);
-    }
-    .feedback-item h4 {
-      color: var(--text-dark);
-      margin-bottom: 5px;
-      font-size: 1.1rem;
-    }
-    .feedback-item h4 span {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      font-weight: normal;
-    }
-    .feedback-item p {
-      color: var(--text-light);
-      line-height: 1.5;
-    }
-
-    /* HOTLINE NỔI BẬT */
-    .hotline-wrapper {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 1000;
-    }
-
-    .hotline-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background-color: #f87171;
-      color: var(--white) !important;
-      padding: 10px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 700;
-      box-shadow: 0 4px 15px rgba(248, 113, 113, 0.4);
-      animation: hotline-wave 7s infinite;
-    }
-
-    .hotline-icon {
-      font-size: 1.3rem;
-    }
-
-    @keyframes hotline-wave {
-      0%, 80% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); }
-      83% { transform: scale(1.05) rotate(5deg); box-shadow: 0 0 0 10px rgba(248, 113, 113, 0.3); }
-      86% { transform: scale(1.05) rotate(-5deg); box-shadow: 0 0 0 20px rgba(248, 113, 113, 0); }
-      89% { transform: scale(1.05) rotate(5deg); box-shadow: 0 0 0 10px rgba(248, 113, 113, 0.2); }
-      92% { transform: scale(1.05) rotate(-5deg); box-shadow: 0 0 0 20px rgba(248, 113, 113, 0); }
-      95%, 100% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
-    }
-
-    /* FOOTER */
-    footer {
-      background-color: var(--text-dark);
-      color: var(--white);
-      text-align: center;
-      padding: 40px 8%;
-    }
-
-    footer p {
-      opacity: 0.8;
-      font-size: 0.9rem;
-    }
-
-    /* RESPONSIVE CHO ĐIỆN THOẠI */
-    @media (max-width: 991px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 120px;
-      }
-      .hero-content {
-        max-width: 100%;
-        margin-bottom: 50px;
-      }
-      .hero-img {
-        max-width: 90%;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--white);
-        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-        padding: 20px 0;
-        border-top: 1px solid #f1f5f9;
-      }
-      nav ul.active {
-        display: flex !important;
-      }
-      .about {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -921,15 +23,16 @@
     <nav>
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <ul id="nav-menu">
-        <li><a href="#">Trang Chủ</a></li>
+        <li><a href="#" class="active-nav">Trang Chủ</a></li>
         <li><a href="#menu">Thực Đơn</a></li>
-        <li><a href="#about">Về Chúng Tôi</a></li>
+        <li><a href="about.html">Về Chúng Tôi</a></li>
         <li><a href="#location">Vị Trí</a></li>
+        <li><a href="#" id="dark-mode-toggle" onclick="toggleDarkMode(event)">🌙 Dark Mode</a></li>
         <li><a href="#feedback">Góp Ý</a></li>
         <li><a href="#" class="btn-nav" onclick="alert('Quán hiện không phục vụ giao hàng. Vui lòng liên hệ Hotline 0363180370 để đặt trước và đến lấy nhé!'); return false;">Liên Hệ Quán</a></li>
         <li>
-          <div class="cart-wrapper" id="cart-icon" onclick="toggleCart()">
-            🛒
+          <div class="cart-wrapper" id="cart-icon-wrapper" onclick="toggleCart()">
+            <span id="cart-icon">🛒</span>
             <span class="cart-count" id="cart-count">0</span>
           </div>
         </li>
@@ -940,6 +43,7 @@
   <!-- Phần Banner chính -->
   <section class="hero">
     <div class="hero-content">
+      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/hinh-anh-dong-powerpoint-hello-kitty.gif" alt="Hello Kitty Vẫy Tay" class="hello-kitty-mascot">
       <h1>Thưởng Thức Trà Sữa <br><span>Ngon Đúng Điệu</span></h1>
       <p>Trải nghiệm hương vị trà sữa nguyên bản kết hợp cùng trân châu dai giòn. Nguyên liệu 100% tự nhiên, an toàn cho sức khỏe và đem lại cảm giác tuyệt vời trong từng ngụm.</p>
       <a href="#menu" class="btn-main">Khám Phá Menu</a>
@@ -969,7 +73,7 @@
     <div class="menu-grid">
       <!-- Thẻ Sản Phẩm 1 -->
       <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua1')">
-        <img src="https://wallpapercave.com/wp/wp11929652.jpg" alt="Trà Sữa Truyền Thống">
+        <img src="data:image/webp;base64,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" alt="Trà Sữa Truyền Thống">
         <h3>Trà Sữa Truyền Thống</h3>
         <p>Hương vị trà đen nguyên bản hòa quyện cùng sữa tươi thơm béo và trân châu đen dai giòn.</p>
         
@@ -996,7 +100,7 @@
 
       <!-- Thẻ Sản Phẩm 2 -->
       <div class="menu-card" style="cursor: pointer;" onclick="toggleOptions('options-trasua2')">
-        <img src="https://vuaphache.net/wp-content/uploads/2017/10/sua-tuoi-tran-chau-duong-den.jpg" alt="Sữa Tươi Trân Châu Đường Đen">
+        <img src="data:image/webp;base64,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" alt="Sữa Tươi Trân Châu Đường Đen">
         <h3>Sữa Tươi Đường Đen</h3>
         <p>Sự kết hợp hoàn hảo giữa sữa tươi thanh trùng và lớp trân châu nấu đường đen đậm đà.</p>
         
@@ -1352,29 +456,35 @@
         </div>
 
         <span class="price">22.000đ</span>
-        <a href="#" class="btn-outline" style="background-color: #e2e8f0; border-color: #e2e8f0; color: #64748b; cursor: not-allowed;" onclick="event.preventDefault(); alert('Món Pizza hiện tại chưa mở bán, bạn vui lòng quay lại sau nhé!');">Chưa mở bán</a>
+        <a href="#" class="btn-outline" disabled data-tooltip="Sắp ra mắt!" onclick="event.preventDefault();">Chưa mở bán</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Phần Về Chúng Tôi -->
-  <section id="about" class="about">
-    <div class="about-img">
-      <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Về Trà Sữa Anh Thư">
-    </div>
-    <div class="about-content">
-      <h2>Câu Chuyện Của Trà Sữa Anh Thư</h2>
-      <p>Khởi nguồn từ niềm đam mê mãnh liệt với hương vị trà nguyên bản, <strong>Trà Sữa Anh Thư</strong> ra đời với sứ mệnh mang đến cho bạn những ly trà sữa không chỉ đậm vị, thơm ngon mà còn tuyệt đối an toàn cho sức khỏe.</p>
-      <p>Chúng tôi tự hào sử dụng 100% lá trà tươi chọn lọc, kết hợp cùng nguồn sữa thanh trùng chất lượng cao và các loại topping được làm thủ công mỗi ngày. Tại Trà Sữa Anh Thư, mỗi thức uống đều được pha chế bằng cả trái tim, với mong muốn mang lại cho bạn những phút giây thư giãn và ngọt ngào nhất.</p>
     </div>
   </section>
 
   <!-- Phần Vị Trí & Bản đồ -->
   <section id="location" class="location">
     <h2>Tìm chúng tôi ở đâu?</h2>
-    <p>Ghé thăm Trà Sữa Anh Thư để thưởng thức những ly trà sữa tuyệt hảo nhé!</p>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.7215882973214!2d105.61502407604834!3d9.53289999054992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a10384762661e9%3A0x173b2dfb72611b5b!2zVHLDoCBz4buvYSBBbmggVGjGsA!5e0!3m2!1sen!2s!4v1777293791346!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Ghé thăm Trà Sữa Anh Thư tại các chi nhánh để thưởng thức những ly trà sữa tuyệt hảo nhé!</p>
+    
+    <div class="branches-container">
+      <!-- Chi nhánh 1 -->
+      <div class="branch-card">
+        <h3>Chi Nhánh 1</h3>
+        <p>070 Mỹ hiệp, Long Bình, Tân Long, Cần Thơ</p>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.7215882973214!2d105.61502407604834!3d9.53289999054992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a10384762661e9%3A0x173b2dfb72611b5b!2zVHLDoCBz4buvYSBBbmggVGjGsA!5e0!3m2!1sen!2s!4v1777293791346!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- Chi nhánh 2 -->
+      <div class="branch-card">
+        <h3>Chi Nhánh 2</h3>
+        <p>Đang cập nhật địa chỉ...</p>
+        <div class="map-container">
+          <img src="https://th.bing.com/th/id/OIP.53kUd48qJDrLyBWTmpCn-wHaHa?w=158&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Chi Nhánh 2" style="width: 100%; height: 300px; object-fit: cover;" loading="lazy">
+          <div class="coming-soon-text">Sắp khai trương</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1415,9 +525,12 @@
         <span class="close-cart" onclick="toggleCart()">✕</span>
       </div>
       <div id="cart-items" class="cart-items"></div>
-      <div class="cart-total">
-        <span>Tổng cộng:</span>
-        <span id="cart-total-price">0đ</span>
+      <div class="cart-total" style="align-items: center;">
+        <button onclick="clearCart()" style="background: none; border: none; color: #f87171; cursor: pointer; font-weight: bold; font-size: 1rem; display: flex; align-items: center; gap: 5px;">🗑️ Xóa tất cả</button>
+        <div>
+          <span>Tổng cộng:</span>
+          <span id="cart-total-price" style="color: var(--primary);">0đ</span>
+        </div>
       </div>
       <a href="#" class="btn-checkout" onclick="handleCheckout(event)">Chốt Đơn & Đến Lấy</a>
     </div>
@@ -1448,19 +561,52 @@
     </div>
   </div>
 
-  <!-- AI Chat Modal -->
-  <div id="ai-chat-modal" class="cart-modal">
+  <!-- Pickup Order Modal -->
+  <div id="pickup-order-modal" class="cart-modal">
     <div class="cart-modal-content">
       <div class="cart-header">
-        <h2 style="font-size: 1.5rem; margin: 0;">AI Tư Vấn Món</h2>
-        <span class="close-cart" onclick="toggleAiChat()">✕</span>
+        <h2 style="font-size: 1.5rem; margin: 0;">Xác Nhận Đơn (Đến lấy)</h2>
+        <span class="close-cart" onclick="document.getElementById('pickup-order-modal').style.display = 'none';">✕</span>
       </div>
-      <div id="ai-chat-messages">
-        <div class="ai-message">Chào bạn! Bạn muốn uống gì hôm nay? Hãy cho tôi biết sở thích của bạn nhé (ví dụ: "món nào mát, ít ngọt" hoặc "trà sữa béo ngậy").</div>
+      <form id="pickupOrderForm" onsubmit="submitPickupOrder(event)">
+        <div class="form-group">
+          <label for="pickupName">Tên của bạn</label>
+          <input type="text" id="pickupName" required placeholder="Nhập tên của bạn...">
+        </div>
+        <div class="form-group">
+          <label for="pickupPhone">Số điện thoại</label>
+          <input type="tel" id="pickupPhone" required placeholder="Để quán gọi bạn khi nước xong...">
+        </div>
+        <div class="form-group">
+          <label for="pickupTime">Thời gian dự kiến đến lấy</label>
+          <input type="text" id="pickupTime" placeholder="Ví dụ: 10 phút nữa, 5 giờ chiều...">
+        </div>
+        <button type="submit" class="btn-checkout" style="border: none; cursor: pointer;">Xác Nhận & Đặt Trước</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div id="order-confirmation-modal" class="cart-modal">
+    <div class="cart-modal-content">
+      <div class="cart-header">
+        <h2 style="font-size: 1.5rem; margin: 0;">Xác Nhận Lại Đơn Hàng</h2>
+        <span class="close-cart" onclick="closeConfirmationModal()">✕</span>
       </div>
-      <div id="ai-chat-input-container">
-        <input type="text" id="ai-chat-input" placeholder="Nhập yêu cầu của bạn...">
-        <button id="ai-chat-send-btn" onclick="sendAiMessage()">➤</button>
+      <p style="margin-bottom: 15px; color: var(--text-light);">Vui lòng kiểm tra lại thông tin đơn hàng của bạn trước khi xác nhận.</p>
+      <div id="confirmation-details">
+        <!-- Chi tiết đơn hàng sẽ được chèn vào đây bằng JavaScript -->
+      </div>
+      <!-- BƯỚC XÁC THỰC CHỐNG BOM HÀNG -->
+      <div class="form-group" style="margin-top: 20px; border-top: 1px dashed #cbd5e1; padding-top: 15px;">
+        <label for="captcha-input" id="captcha-label">Để xác nhận, vui lòng trả lời: 3 + 5 = ?</label>
+        <input type="number" id="captcha-input" placeholder="Nhập câu trả lời của bạn..." required style="text-align: center; font-size: 1.2rem; font-weight: bold;">
+        <p id="captcha-error" style="color: #f87171; font-size: 0.9rem; margin-top: 5px; display: none;">Câu trả lời không đúng. Vui lòng thử lại.</p>
+      </div>
+      <!-- KẾT THÚC BƯỚC XÁC THỰC -->
+      <div class="confirmation-buttons" style="display: flex; gap: 15px; margin-top: 20px;">
+        <button onclick="closeConfirmationModal()" class="btn-outline" style="flex: 1; border-color: #94a3b8; color: #94a3b8;">Hủy</button>
+        <button id="final-confirm-btn" class="btn-checkout" style="flex: 2; border: none; cursor: pointer;">Xác Nhận Đặt Hàng</button>
       </div>
     </div>
   </div>
@@ -1481,488 +627,6 @@
     </a>
   </div>
 
-  <!-- Nút AI Chat Nổi -->
-  <div class="ai-chat-wrapper">
-    <div class="ai-chat-btn" onclick="toggleAiChat()">
-      <span class="ai-chat-icon">🤖</span>
-      <span class="ai-chat-text">AI Tư Vấn</span>
-    </div>
-  </div>
-
-  <script type="module">
-    import Groq from "https://cdn.jsdelivr.net/npm/groq-sdk@latest/dist/browser.mjs";
-    window.Groq = Groq; // Make it available globally for the next script
-  </script>
-  <script>
-    function toggleMenu() {
-      const navMenu = document.getElementById('nav-menu');
-      navMenu.classList.toggle('active');
-    }
-
-    function toggleOptions(id) {
-      const el = document.getElementById(id);
-      if (el.style.display === "block") {
-        el.style.display = "none";
-      } else {
-        el.style.display = "block";
-      }
-    }
-
-    // DANH SÁCH GIỎ HÀNG
-    let cartList = [];
-
-    // AI CHATBOT
-    const GROQ_API_KEY = "temp123";
-    let groq;
-    let groqModel;
-    let menuForAI = '';
-
-    function updateCartCount() {
-      const totalQuantity = cartList.reduce((sum, item) => sum + item.quantity, 0);
-      document.getElementById('cart-count').innerText = totalQuantity;
-    }
-
-    function saveCartAndRender() {
-      localStorage.setItem('trasua_cart', JSON.stringify(cartList));
-      updateCartCount();
-      // Chỉ render lại giỏ hàng nếu nó đang được mở
-      if (document.getElementById('cart-modal').style.display === 'flex') {
-        renderCart();
-      }
-    }
-
-    function updateCartQuantity(index, change) {
-      const item = cartList[index];
-      if (item) {
-        item.quantity += change;
-        if (item.quantity <= 0) {
-          // Nếu số lượng về 0 hoặc âm, xóa sản phẩm khỏi giỏ hàng
-          cartList.splice(index, 1);
-        }
-        saveCartAndRender();
-      }
-    }
-
-    function toggleCart() {
-      const cartModal = document.getElementById('cart-modal');
-      if (cartModal.style.display === "flex") {
-        cartModal.style.display = "none";
-      } else {
-        cartModal.style.display = "flex";
-        renderCart();
-      }
-    }
-
-    function renderCart() {
-      const cartItemsContainer = document.getElementById('cart-items');
-      const cartTotalPrice = document.getElementById('cart-total-price');
-      
-      cartItemsContainer.innerHTML = '';
-      let total = 0;
-
-      if (cartList.length === 0) {
-        cartItemsContainer.innerHTML = '<p style="text-align: center; color: var(--text-light);">Giỏ hàng đang trống</p>';
-        cartTotalPrice.innerText = '0đ';
-        return;
-      }
-
-      cartList.forEach((item, index) => {
-        total += item.price * item.quantity;
-        cartItemsContainer.innerHTML += `
-          <div class="cart-item">
-            <div class="cart-item-info">
-              <h4>${item.name}</h4>
-              <p>${item.description}</p>
-              <div class="cart-item-quantity">
-                <button onclick="updateCartQuantity(${index}, -1)">-</button>
-                <span>${item.quantity}</span>
-                <button onclick="updateCartQuantity(${index}, 1)">+</button>
-              </div>
-            </div>
-            <div class="cart-item-price">
-              ${(item.price * item.quantity).toLocaleString('vi-VN')}đ
-              <br>
-              <button class="btn-remove" onclick="removeFromCart(${index})">Xóa</button>
-            </div>
-          </div>
-        `;
-      });
-      cartTotalPrice.innerText = total.toLocaleString('vi-VN') + 'đ';
-    }
-
-    function handleCheckout(event) {
-      event.preventDefault();
-      // Lấy số lượng đơn hàng đã đặt trước đó từ Local Storage
-      const pastOrderCount = parseInt(localStorage.getItem('trasua_order_count') || '0');
-      // Lấy tổng số lượng của tất cả các món đang có trong giỏ hàng hiện tại
-      const currentCartTotalQuantity = cartList.reduce((sum, item) => sum + item.quantity, 0);
-      
-      if (pastOrderCount > 25 || currentCartTotalQuantity > 25) {
-        document.getElementById('cart-modal').style.display = 'none';
-        document.getElementById('vip-order-modal').style.display = 'flex';
-      } else {
-        alert('Quán không giao hàng tận nơi. Vui lòng gọi 0363180370 để chốt đơn và đến quán nhận nước nhé!');
-      }
-    }
-
-    function submitVipOrder(event) {
-      event.preventDefault();
-      alert('Đặt hàng VIP thành công! Đơn hàng của bạn đang được chuẩn bị và giao đi.');
-      document.getElementById('vipOrderForm').reset();
-      document.getElementById('vip-order-modal').style.display = 'none';
-      cartList = [];
-      saveCartAndRender();
-    }
-
-    function searchProducts() {
-      // 1. Lấy giá trị nhập vào và chuyển thành chữ hoa để tìm kiếm không phân biệt chữ hoa/thường
-      const input = document.getElementById('search-input');
-      const filter = input.value.toUpperCase();
-
-      // 2. Lấy tất cả các thẻ sản phẩm
-      const cards = document.querySelectorAll('.menu-grid .menu-card');
-
-      // 3. Lặp qua tất cả các thẻ và ẩn những thẻ không khớp với từ khóa tìm kiếm
-      cards.forEach(card => {
-        const titleElement = card.querySelector("h3");
-        if (titleElement) {
-          const titleText = titleElement.textContent || titleElement.innerText;
-          if (titleText.toUpperCase().indexOf(filter) > -1) {
-            card.style.display = ""; // Hiện thẻ nếu khớp
-          } else {
-            card.style.display = "none"; // Ẩn thẻ nếu không khớp
-          }
-        }
-      });
-
-      // 4. Xử lý ẩn/hiện tiêu đề danh mục (Nước uống, Đồ ăn vặt)
-      const categoryTitles = document.querySelectorAll('.category-title');
-      categoryTitles.forEach(title => {
-        const grid = title.nextElementSibling;
-        if (grid && grid.classList.contains('menu-grid')) {
-          // Kiểm tra xem có sản phẩm nào trong danh mục này đang được hiển thị không
-          const visibleCards = grid.querySelectorAll('.menu-card:not([style*="display: none"])');
-          if (visibleCards.length > 0) {
-            title.style.display = ""; // Hiện tiêu đề nếu có sản phẩm
-          } else {
-            title.style.display = "none"; // Ẩn tiêu đề nếu không có sản phẩm nào
-          }
-        }
-      });
-    }
-
-    function removeFromCart(index) {
-      cartList.splice(index, 1);
-      saveCartAndRender();
-    }
-
-    function addToCart(event) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      const button = event.target;
-      const card = button.closest('.menu-card');
-      const img = card.querySelector('img');
-      let name = card.querySelector('h3').innerText;
-
-      // Xử lý thêm vị cho các món Mix
-      const flavorSelect = card.querySelector('.flavor-select');
-      if (flavorSelect) {
-        name += ' (' + flavorSelect.value + ')';
-      }
-      
-      // Lấy size, topping và tính giá từ Radio Button được chọn (hoặc giá mặc định nếu không có size)
-      const selectedSize = card.querySelector('input[type="radio"][name^="size_"]:checked');
-      const selectedTopping = card.querySelector('input[type="radio"][name^="topping_"]:checked');
-      
-      let size = 'Mặc định';
-      let basePrice = 0;
-      let toppingPrice = 0;
-      let toppingValue = '';
-      
-      if (selectedSize) {
-        size = selectedSize.value;
-        const sizeText = selectedSize.parentElement.textContent.split('-')[1];
-        if (sizeText) basePrice = parseInt(sizeText.replace(/[^0-9]/g, ''));
-      } else {
-        const priceElem = card.querySelector('.price');
-        if (priceElem) basePrice = parseInt(priceElem.innerText.replace(/[^0-9]/g, ''));
-      }
-
-      if (selectedTopping) {
-        toppingValue = selectedTopping.value;
-        const topText = selectedTopping.parentElement.textContent;
-        if (topText.includes('+')) {
-          toppingPrice = parseInt(topText.split('+')[1].replace(/[^0-9]/g, '')) || 0;
-        }
-      }
-
-      const price = basePrice + toppingPrice;
-
-      // Tạo ID duy nhất cho sản phẩm dựa trên tên, size và topping
-      const itemId = name + '_' + size + '_' + toppingValue;
-
-      // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
-      const existingItem = cartList.find(item => item.id === itemId);
-
-      if (existingItem) {
-        // Nếu có, tăng số lượng
-        existingItem.quantity++;
-      } else {
-        // Nếu chưa, thêm sản phẩm mới vào giỏ hàng
-        let description = `Size: ${size}`;
-        if (toppingValue) {
-            description += ` (${toppingValue} Topping)`;
-        }
-        cartList.push({ id: itemId, name, description, price, priceText: price.toLocaleString('vi-VN') + 'đ', quantity: 1 });
-      }
-      
-      saveCartAndRender();
-
-      // --- START: Hiển thị thông báo ---
-      const toast = document.getElementById('toast-notification');
-      toast.textContent = `Đã thêm "${name}" vào giỏ hàng!`;
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3000); // Ẩn sau 3 giây
-      // --- END: Hiển thị thông báo ---
-
-      // Tạo hình ảnh bay
-      const imgRect = img.getBoundingClientRect();
-      const cartIcon = document.getElementById('cart-icon');
-      const cartRect = cartIcon.getBoundingClientRect();
-      const clone = img.cloneNode();
-      clone.classList.add('flying-img');
-      clone.style.top = imgRect.top + 'px';
-      clone.style.left = imgRect.left + 'px';
-      clone.style.width = imgRect.width + 'px';
-      clone.style.height = imgRect.height + 'px';
-      document.body.appendChild(clone);
-
-      void clone.offsetWidth;
-      clone.style.top = cartRect.top + (cartRect.height / 2) - 15 + 'px';
-      clone.style.left = cartRect.left + (cartRect.width / 2) - 15 + 'px';
-      clone.style.width = '30px'; clone.style.height = '30px';
-      clone.style.opacity = '0'; clone.style.transform = 'scale(0.2) rotate(360deg)';
-
-      setTimeout(() => {
-        clone.remove();
-        cartIcon.style.transform = 'scale(1.2)';
-        setTimeout(() => cartIcon.style.transform = 'scale(1)', 200);
-      }, 800);
-    }
-
-    function rateProduct(event, value) {
-      event.preventDefault();
-      event.stopPropagation(); // Ngăn sự kiện click ảnh hưởng đến card sản phẩm
-      const container = event.target.closest('.interactive-rating');
-      const stars = container.querySelectorAll('.star');
-      const text = container.querySelector('.rating-text');
-
-      stars.forEach(star => {
-        if (parseInt(star.getAttribute('data-value')) <= value) {
-          star.classList.add('active');
-        } else {
-          star.classList.remove('active');
-        }
-      });
-      
-      text.innerText = `(Đã đánh giá ${value} sao)`;
-
-      // Lưu số sao vào Local Storage với key là tên món
-      const card = event.target.closest('.menu-card');
-      const productName = card.querySelector('h3').innerText;
-      localStorage.setItem('rating_' + productName, value);
-    }
-
-    // XỬ LÝ LƯU VÀ HIỂN THỊ GÓP Ý
-    function submitFeedback(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const message = document.getElementById('message').value;
-      
-      // Lấy ngày giờ hiện tại
-      const today = new Date();
-      const date = today.toLocaleDateString('vi-VN') + ' lúc ' + today.toLocaleTimeString('vi-VN');
-
-      const feedback = { name, message, date };
-      
-      // Lấy danh sách cũ hoặc tạo mới nếu chưa có
-      let feedbacks = JSON.parse(localStorage.getItem('trasua_feedbacks')) || [];
-      feedbacks.unshift(feedback); // Đưa góp ý mới nhất lên đầu danh sách
-      localStorage.setItem('trasua_feedbacks', JSON.stringify(feedbacks));
-
-      alert('Cảm ơn bạn đã góp ý! Trà Sữa Anh Thư đã ghi nhận thông tin của bạn.');
-      document.getElementById('feedbackForm').reset(); // Xoá sạch form
-      renderFeedbacks(); // Cập nhật lại danh sách hiển thị
-    }
-
-    function renderFeedbacks() {
-      const list = document.getElementById('feedback-list');
-      const feedbacks = JSON.parse(localStorage.getItem('trasua_feedbacks')) || [];
-      
-      if (feedbacks.length === 0) {
-        list.innerHTML = '<p style="text-align: center; color: var(--text-light); font-style: italic;">Chưa có góp ý nào. Hãy là người đầu tiên!</p>';
-        return;
-      }
-
-      list.innerHTML = '';
-      feedbacks.forEach(fb => {
-        list.innerHTML += `
-          <div class="feedback-item">
-            <h4>${fb.name} <span>- ${fb.date}</span></h4>
-            <p>${fb.message}</p>
-          </div>
-        `;
-      });
-    }
-
-    // AI CHATBOT FUNCTIONS
-    function toggleAiChat() {
-      const modal = document.getElementById('ai-chat-modal');
-      modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
-    }
-
-    function addMessageToChat(message, sender) {
-      const messagesContainer = document.getElementById('ai-chat-messages');
-      
-      // Remove existing typing indicator
-      const typingIndicator = messagesContainer.querySelector('.typing');
-      if (typingIndicator) {
-        typingIndicator.remove();
-      }
-
-      const messageDiv = document.createElement('div');
-      messageDiv.className = (sender === 'user') ? 'user-message' : 'ai-message';
-      if (sender === 'ai typing') {
-        messageDiv.classList.add('typing');
-      }
-      messageDiv.textContent = message;
-
-      messagesContainer.appendChild(messageDiv);
-      messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to bottom
-    }
-
-    async function sendAiMessage() {
-      const input = document.getElementById('ai-chat-input');
-      const userMessage = input.value.trim();
-
-      if (!userMessage) return;
-
-      // Thêm kiểm tra xem Groq đã được khởi tạo chưa
-      if (!groq) {
-        addMessageToChat("Lỗi: AI chưa sẵn sàng. Vui lòng kiểm tra lại API Key trong code và kết nối mạng, sau đó tải lại trang.", 'ai');
-        console.error("Groq client is not initialized. Check SDK loading and API key setup in DOMContentLoaded.");
-        return;
-      }
-
-      if (!GROQ_API_KEY || GROQ_API_KEY === "YOUR_GROQ_API_KEY") {
-        addMessageToChat("Lỗi: Vui lòng cấu hình API Key của Groq trong mã nguồn.", 'ai');
-        return;
-      }
-
-      addMessageToChat(userMessage, 'user');
-      input.value = '';
-
-      addMessageToChat("AI đang nghĩ...", 'ai typing');
-
-      try {
-        const chatCompletion = await groq.chat.completions.create({
-          messages: [
-            {
-              role: "system",
-              content: `Bạn là một trợ lý AI thân thiện của quán trà sữa "Trà Sữa Anh Thư". Nhiệm vụ của bạn là dựa vào sở thích của khách hàng để gợi ý món nước phù hợp từ thực đơn dưới đây. Luôn trả lời bằng tiếng Việt, giữ giọng văn vui vẻ, ngắn gọn và chỉ gợi ý các món có trong thực đơn.
-
-              --- THỰC ĐƠN ---
-              ${menuForAI}
-              ---`
-            },
-            {
-              role: "user",
-              content: userMessage
-            }
-          ],
-          model: groqModel,
-          temperature: 0.7,
-          max_tokens: 150,
-          stream: false,
-        });
-        const text = chatCompletion.choices[0]?.message?.content || "Rất tiếc, tôi không thể tạo phản hồi lúc này.";
-
-        addMessageToChat(text, 'ai');
-      } catch (error) {
-        console.error("Error calling Groq API:", error);
-        addMessageToChat("Rất tiếc, đã có lỗi xảy ra. Vui lòng thử lại sau.", 'ai');
-      }
-    }
-
-    // Tự động tải lại số sao đã đánh giá khi mở trang web
-    document.addEventListener('DOMContentLoaded', () => {
-      // Tải giỏ hàng từ localStorage khi trang được tải
-      const savedCart = localStorage.getItem('trasua_cart');
-      if (savedCart) {
-        cartList = JSON.parse(savedCart);
-        updateCartCount();
-      }
-
-      // --- START AI CHATBOT SETUP ---
-      if (window.Groq && GROQ_API_KEY && GROQ_API_KEY !== "YOUR_GROQ_API_KEY") {
-        try {
-          groq = new window.Groq({ apiKey: GROQ_API_KEY, dangerouslyAllowBrowser: true });
-          groqModel = "llama3-8b-8192"; // Bạn có thể thử "llama3-70b-8192" cho mô hình mạnh hơn
-        } catch (e) {
-          console.error("Error initializing Groq AI: ", e);
-        }
-      }
-
-      // Parse menu for AI
-      const menuItems = [];
-      document.querySelectorAll('.menu-grid .menu-card').forEach(card => {
-        const name = card.querySelector('h3')?.innerText;
-        const description = card.querySelector('p')?.innerText;
-        const price = card.querySelector('.price')?.innerText;
-        if (name && description && price) {
-          menuItems.push(`- ${name} (${price}): ${description}`);
-        }
-      });
-      menuForAI = menuItems.join('\n');
-
-      document.getElementById('ai-chat-input').addEventListener('keypress', (e) => e.key === 'Enter' && sendAiMessage());
-      // --- END AI CHATBOT SETUP ---
-
-      // Ẩn menu mobile khi click vào các liên kết
-      document.querySelectorAll('#nav-menu a, #cart-icon').forEach(item => {
-        item.addEventListener('click', () => {
-          if (window.innerWidth <= 991) {
-            document.getElementById('nav-menu').classList.remove('active');
-          }
-        });
-      });
-
-      renderFeedbacks(); // Tải danh sách góp ý
-
-      const cards = document.querySelectorAll('.menu-card');
-      cards.forEach(card => {
-        const productName = card.querySelector('h3').innerText;
-        const savedRating = localStorage.getItem('rating_' + productName);
-        
-        if (savedRating) {
-          const container = card.querySelector('.interactive-rating');
-          if (container) {
-            const stars = container.querySelectorAll('.star');
-            const text = container.querySelector('.rating-text');
-            
-            stars.forEach(star => {
-              if (parseInt(star.getAttribute('data-value')) <= savedRating) {
-                star.classList.add('active');
-              }
-            });
-            text.innerText = `(Đã đánh giá ${savedRating} sao)`;
-          }
-        }
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

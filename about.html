@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Về Chúng Tôi - Trà Sữa Anh Thư</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- Thanh điều hướng -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="https://drive.google.com/uc?export=view&id=1AyaJjtQlxNuyqVS8xvWakwvBeukoczV_" alt="Logo Trà Sữa Anh Thư">
+      Trà Sữa Anh Thư
+    </a>
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul id="nav-menu">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="index.html#menu">Thực Đơn</a></li>
+        <li><a href="about.html" class="active-nav">Về Chúng Tôi</a></li>
+        <li><a href="index.html#location">Vị Trí</a></li>
+        <li><a href="#" id="dark-mode-toggle" onclick="toggleDarkMode(event)">🌙 Dark Mode</a></li>
+        <li><a href="index.html#feedback">Góp Ý</a></li>
+        <li><a href="#" class="btn-nav" onclick="alert('Quán hiện không phục vụ giao hàng. Vui lòng liên hệ Hotline 0363180370 để đặt trước và đến lấy nhé!'); return false;">Liên Hệ Quán</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Phần Về Chúng Tôi -->
+  <section id="about" class="about" style="flex: 1; padding-top: 120px; align-items: center;">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Về Trà Sữa Anh Thư">
+    </div>
+    <div class="about-content">
+      <h2>Câu Chuyện Của Trà Sữa Anh Thư</h2>
+      <p>Khởi nguồn từ niềm đam mê mãnh liệt với hương vị trà nguyên bản, <strong>Trà Sữa Anh Thư</strong> ra đời với sứ mệnh mang đến cho bạn những ly trà sữa không chỉ đậm vị, thơm ngon mà còn tuyệt đối an toàn cho sức khỏe.</p>
+      <p>Chúng tôi tự hào sử dụng 100% lá trà tươi chọn lọc, kết hợp cùng nguồn sữa thanh trùng chất lượng cao và các loại topping được làm thủ công mỗi ngày. Tại Trà Sữa Anh Thư, mỗi thức uống đều được pha chế bằng cả trái tim, với mong muốn mang lại cho bạn những phút giây thư giãn và ngọt ngào nhất.</p>
+
+      <h3 style="margin-top: 35px; color: var(--primary); font-size: 1.5rem;">Hành Trình Phát Triển</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>2022 - 2023</h4>
+            <p>Trà Sữa Anh Thư chính thức ra mắt, mang những ly trà sữa đầu tiên đến với khách hàng tại Cần Thơ.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>2024</h4>
+            <p>Ra mắt bộ sưu tập Trà Trái Cây giải nhiệt, nhanh chóng trở thành sản phẩm được yêu thích nhất mùa hè.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Tương lai</h4>
+            <p>Dự kiến khai trương Chi nhánh 2 để phục vụ được nhiều khách hàng hơn nữa. Hãy chờ đón nhé!</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 25px; color: var(--primary); font-size: 1.5rem;">Đội Ngũ Của Chúng Tôi</h3>
+      <div class="team-accordion">
+        <!-- Chủ quán -->
+        <div class="team-category">
+          <div class="team-header" onclick="toggleTeam(this)">
+            <span style="display: flex; align-items: center; gap: 10px;">
+              <span class="header-icon">👑</span> Ban Giám Đốc & Chủ Quán
+            </span>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="team-content">
+            <div class="member-grid">
+              <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Hồng Thắm">
+                <div class="member-info">
+                  <h4>Hồng Thắm</h4>
+                  <p>Founder & Chủ Quán</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Phụ trách -->
+        <div class="team-category">
+          <div class="team-header" onclick="toggleTeam(this)">
+            <span style="display: flex; align-items: center; gap: 10px;">
+              <span class="header-icon">💼</span> Quản Lý & Phụ Trách
+            </span>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="team-content">
+            <div class="member-grid">
+              <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Anh Thư">
+                <div class="member-info">
+                  <h4>Anh Thư</h4>
+                  <p>Cửa Hàng Trưởng</p>
+                </div>
+              </div>
+              <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Minh Anh">
+                <div class="member-info">
+                  <h4>Minh Anh</h4>
+                  <p>Trưởng Ca Pha Chế</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Web Developer -->
+        <div class="team-category">
+          <div class="team-header" onclick="toggleTeam(this)">
+            <span style="display: flex; align-items: center; gap: 10px;">
+              <span class="header-icon">👨‍💻</span> Đội Ngũ Phát Triển (IT)
+            </span>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="team-content">
+            <div class="member-grid">
+              <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Gia Hạo">
+                <div class="member-info">
+                  <h4>Gia Hạo</h4>
+                  <p>Lead Web Developer</p>
+                </div>
+              </div>
+              <div class="member-card">
+                <img src="https://via.placeholder.com/100" alt="Chí Bình">
+                <div class="member-info">
+                  <h4>Chí Bình</h4>
+                  <p>Frontend Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 35px; color: var(--primary); font-size: 1.5rem;">Không Gian Quán</h3>
+      <p style="margin-bottom: 20px;">Một góc nhỏ để bạn ghé qua, thưởng thức trà sữa và ghi lại những khoảnh khắc thật chill. Bấm vào nút bên dưới để xem toàn bộ thư viện ảnh nhé!</p>
+      <a href="gallery.html" class="btn-outline" style="max-width: 250px; display: inline-block;">Khám Phá Không Gian Quán</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Trà Sữa Anh Thư. All rights reserved. Thiết kế hiện đại mang lại trải nghiệm tốt nhất.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
